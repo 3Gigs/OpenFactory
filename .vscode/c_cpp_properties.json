@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": ["${myDefaultIncludePath}", "/opt/homebrew/Cellar/raylib/4.2.0/include"],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11"
+        }
+    ]
+}
