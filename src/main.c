@@ -15,9 +15,7 @@ int main(void) {
   Color ballMouseColor = DARKBLUE;
 
   // Game loop
-  // Game loop
   while (!WindowShouldClose()) {
-    // Update
     // Update
     HideCursor();
     if (IsKeyDown(KEY_RIGHT))
