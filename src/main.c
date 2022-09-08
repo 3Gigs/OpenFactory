@@ -10,9 +10,24 @@ int main(void) {
   InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "OpenFactory");
 
   Vector2 rectPos_Key = {(float)SCREEN_WIDTH / 2, (float)SCREEN_HEIGHT / 2};
-
   Vector2 ballPos_Mouse = {(float)SCREEN_WIDTH / 2, (float)SCREEN_HEIGHT / 2};
   Color ballMouseColor = DARKBLUE;
+
+  Rectangle buildings[MAX_BUILDINGS] = {0};
+  Color buildColors[MAX_BUILDINGS] = { 0 };
+  int spacing = 0;
+  for(int i = 0; i < MAX_BUILDINGS; i++) {
+    buildings[i].width = (float)GetRandomValue(50, 200);
+    buildings[i].height = (float)GetRandomValue(100, 800);
+    buildings[i].y = SCREEN_HEIGHT - 130.0f - buildings[i].height;
+    buildings[i].x = -6000.0f + spacing;
+
+    spacing += (int)buildings[i].width;
+
+    buildColors[i] = (Color){ GetRandomValue(200, 240), GetRandomValue(200, 240), GetRandomValue(200, 250), 255 };
+  }
+
+  Camera p_camera = { 0 }; // TODO: Work on camera
 
   // Game loop
   while (!WindowShouldClose()) {
