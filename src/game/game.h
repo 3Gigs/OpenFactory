@@ -1,0 +1,2 @@
+void checkInput();
+void startGameLoop();
