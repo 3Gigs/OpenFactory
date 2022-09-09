@@ -10,9 +10,15 @@ void startGameLoop() {
 
   InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Untitled Game");
 
+  Player *player = createPlayer();
+
+  initWorld();
+
   // Game loop
   while (!WindowShouldClose()) {
     checkInput();
+    UpdateCamera(&player->camera);
+    drawWorld(player);
   }
 
   CloseWindow();

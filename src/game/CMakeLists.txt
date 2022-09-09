@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.20)
 project(Game)
 set(CMAKE_C_STANDARD 11)
 
-add_library(Game STATIC game.c events.c controls.c world.c)
+add_library(Game STATIC game.c events.c controls.c world.c player.c)
 target_include_directories(Game PUBLIC game.h)
 
 find_package(raylib 3.0 REQUIRED)
