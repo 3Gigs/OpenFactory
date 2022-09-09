@@ -7,7 +7,7 @@
 
 int main(void) {
   SetTargetFPS(60);
-  InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "OpenFactory");
+  InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Untitled Game");
 
   Color ballMouseColor = DARKBLUE;
   Vector2 ballPos_Mouse = {(float)SCREEN_WIDTH / 2, (float)SCREEN_HEIGHT / 2};

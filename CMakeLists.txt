@@ -1,16 +1,16 @@
 cmake_minimum_required(VERSION 3.20)
-project(OpenFactory)
+project(Untitled_Game)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(OpenFactory src/main.c)
+add_executable(${PROJECT_NAME} src/main.c)
 
 find_package(raylib 3.0 REQUIRED)
-target_link_libraries(OpenFactory raylib)
-target_include_directories(OpenFactory PRIVATE ${raylib_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} raylib)
+target_include_directories(${PROJECT_NAME} PRIVATE ${raylib_INCLUDE_DIRS})
 
 if (APPLE)
-    target_link_libraries(OpenFactory "-framework IOKit")
-    target_link_libraries(OpenFactory "-framework Cocoa")
-    target_link_libraries(OpenFactory "-framework OpenGL")
+    target_link_libraries(${PROJECT_NAME} "-framework IOKit")
+    target_link_libraries(${PROJECT_NAME} "-framework Cocoa")
+    target_link_libraries(${PROJECT_NAME} "-framework OpenGL")
 endif()
